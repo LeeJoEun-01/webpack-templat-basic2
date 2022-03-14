@@ -4,6 +4,7 @@ const CopyPlugin = require('copy-webpack-plugin')
 
 //export 
 module.exports = {
+  mode: 'development',
   // 파일을 읽어들이기 시작하는 진입점 설정
   entry: './js/main.js',
 
@@ -27,6 +28,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
+        exclude: /node_modules/,
         use: [
           'babel-loader'
         ]
